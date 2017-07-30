@@ -13155,8 +13155,8 @@ const wasm = __webpack_require__(77)
 wasm.initialize().then(module => {
   // create javascript wrapper around rust
   const add = module.cwrap('add', 'number', ['number', 'number'])
-  console.log('calling rust functions from javascript')
-  console.log('1 + 2 = ' + add(1, 2))
+  alert('Hello from Web Assembly!\nUsing Rust, I calculated ' + '1 + 2 = ' + add(1, 2) + ', and ' + '3 + 4 = ' + add(3, 4))
+  var btn = document.createElement("BUTTON");
 });
 
 
@@ -15198,7 +15198,7 @@ var ASM_CONSTS = [];
 
 STATIC_BASE = Runtime.GLOBAL_BASE;
 
-STATICTOP = STATIC_BASE + 14960;
+STATICTOP = STATIC_BASE + 14992;
 /* global initializers */  __ATINIT__.push();
 
 
@@ -15207,7 +15207,7 @@ memoryInitializer = Module["wasmJSMethod"].indexOf("asmjs") >= 0 || Module["wasm
 
 
 
-var STATIC_BUMP = 14960;
+var STATIC_BUMP = 14992;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 

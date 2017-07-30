@@ -1,5 +1,5 @@
 fn main() {
-    println!("Hello, world!");
+    println!("Hello! I am from the Rust world!");
 }
 
 #[no_mangle]
